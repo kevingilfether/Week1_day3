@@ -73,34 +73,61 @@ namespace Week1_day3
 
             // New type of conditional! This time it's the switch statement.
 
-            Console.WriteLine("How many points did you earn?");
-            int pointsEarned = int.Parse(Console.ReadLine());
+            //Console.WriteLine("How many points did you earn?");
+            //int pointsEarned = int.Parse(Console.ReadLine());
 
-            switch (pointsEarned)
+            //switch (pointsEarned)
+            //{
+            //    case 0:
+            //        Console.WriteLine("You Lose.");
+            //        break;
+            //    case 1:
+            //        Console.WriteLine("Needs practice.");
+            //        break;
+            //    case 2:
+            //        Console.WriteLine("On target");
+            //        break;
+            //    case 3:
+            //        Console.WriteLine("Supertsar.");
+            //        break;
+            //    case 4:
+            //        Console.WriteLine("Overachiever!");
+            //        break;
+            //    case 5:
+            //        Console.WriteLine("You cheated.");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Invalid score entered.");
+            //        break;
+
+            //}
+
+            //int shareOfDinner = 13;
+            //int numDiners = 4;
+            //int totalDinnerCost = shareOfDinner * numDiners;
+            //Console.WriteLine ("The dinner cost $" + totalDinnerCost + ".");
+
+            Console.WriteLine("Enter how much each diner pays:");
+            double shareOfDinner = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter how many diners you have:");
+            int numDiners = int.Parse(Console.ReadLine());
+
+            double totalDinnerCost = shareOfDinner * numDiners;
+            
+            if (totalDinnerCost >= 50)
             {
-                case 0:
-                    Console.WriteLine("You Lose.");
-                    break;
-                case 1:
-                    Console.WriteLine("Needs practice.");
-                    break;
-                case 2:
-                    Console.WriteLine("On target");
-                    break;
-                case 3:
-                    Console.WriteLine("Supertsar.");
-                    break;
-                case 4:
-                    Console.WriteLine("Overachiever!");
-                    break;
-                case 5:
-                    Console.WriteLine("You cheated.");
-                    break;
-                default:
-                    Console.WriteLine("Invalid score entered.");
-                    break;
-
+                totalDinnerCost = totalDinnerCost * 0.9d;
+                Console.WriteLine("Congrats, you got a 10% discount! The dinner cost $" + totalDinnerCost + ".");
             }
+            else
+            {
+                totalDinnerCost = totalDinnerCost * 0.95d;
+                Console.WriteLine("Congrats, you got a 5% discount! The dinner cost $" + totalDinnerCost + ".");
+            }
+            Console.ReadKey();
+
+
 
         }
     }
