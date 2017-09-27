@@ -12,18 +12,37 @@ namespace Week1_day3
         {
             // Conditionals - If then, if else, etc.
 
-            int firstNumber = 2;
-            int secondNumber = 6;
+            //int firstNumber = 2;
+            //int secondNumber = 6;
 
-            if(firstNumber > secondNumber)
+            //if(firstNumber > secondNumber)
+            //{
+            //    // Do Something
+            //    Console.WriteLine("This is an untrue expression. You messed up.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("That makes sense.");
+            //}
+
+            Console.WriteLine("What day of the week is it?");
+            string userAnswer = Console.ReadLine();
+
+            if (userAnswer == "Monday")
             {
-                // Do Something
-                Console.WriteLine("This is an untrue expression. You messed up.");
+                Console.WriteLine("Back to work.");
+            }
+            else if (userAnswer == "Friday")
+            {
+                Console.WriteLine("TGIF!!!");
             }
             else
             {
-                Console.WriteLine("That makes sense.");
+                Console.WriteLine("Bloop. (You got it.)");
             }
+
+
+
 
 
         }
