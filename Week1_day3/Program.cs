@@ -68,8 +68,39 @@ namespace Week1_day3
             //{
             //    Console.WriteLine("That's not really your age...");
             //}
-           
 
+
+
+            // New type of conditional! This time it's the switch statement.
+
+            Console.WriteLine("How many points did you earn?");
+            int pointsEarned = int.Parse(Console.ReadLine());
+
+            switch (pointsEarned)
+            {
+                case 0:
+                    Console.WriteLine("You Lose.");
+                    break;
+                case 1:
+                    Console.WriteLine("Needs practice.");
+                    break;
+                case 2:
+                    Console.WriteLine("On target");
+                    break;
+                case 3:
+                    Console.WriteLine("Supertsar.");
+                    break;
+                case 4:
+                    Console.WriteLine("Overachiever!");
+                    break;
+                case 5:
+                    Console.WriteLine("You cheated.");
+                    break;
+                default:
+                    Console.WriteLine("Invalid score entered.");
+                    break;
+
+            }
 
         }
     }
